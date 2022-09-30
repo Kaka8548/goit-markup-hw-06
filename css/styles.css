@@ -4,6 +4,7 @@
   --box-color: #2f303a;
   --header-stroke: 1px solid #ececec;
   --card-border: 1px solid #eeeeee;
+  --footer-input-border: 1px solid rgba(255, 255, 255, 0.3);
   --main-text-color: #212121;
   --secondary-text-color: #757575;
   --team-social-media: #afb1b8;
@@ -207,8 +208,8 @@ img {
   color: var(--white-color);
 }
 
-.banner .order-btn {
-  padding: 10px 32px;
+.banner .order-btn,
+.footer-form .submit-btn {
   cursor: pointer;
   color: var(--white-color);
   font-family: inherit;
@@ -218,6 +219,10 @@ img {
   letter-spacing: 0.06em;
   background-color: var(--main-color);
   border: none;
+}
+
+.banner .order-btn {
+  padding: 10px 32px;
 }
 
 /* Переваги */
@@ -479,8 +484,10 @@ img {
   margin-left: 10px;
 }
 
-.join-heading {
+.join-heading,
+.form-title {
   margin-bottom: 20px;
+
   color: var(--white-color);
   text-transform: uppercase;
   font-weight: 700;
@@ -497,6 +504,57 @@ img {
 .join .link:hover,
 .join .link:focus {
   background-color: var(--main-color);
+}
+
+.contacts .third-col {
+  margin-left: auto;
+  width: 570px;
+}
+
+.footer-form .form-title {
+  display: block;
+}
+
+.footer-form .input-btn-wrapper {
+  display: flex;
+}
+
+.footer-form .email-input {
+  margin-right: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  flex-grow: 2;
+  border: var(--footer-input-border);
+  border-radius: 4px;
+  background-color: transparent;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form .email-input:focus {
+  outline: none;
+  border-color: var(--main-color);
+}
+
+.email-input::placeholder {
+  font-size: 16px;
+  line-height: 1.3;
+  color: var(--transparent-grey-color);
+}
+
+.footer-form .submit-btn {
+  min-width: 200px;
+  min-height: 50px;
+  padding: 0;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-form .send-icon {
+  margin-left: 10px;
+  fill: var(--white-color);
 }
 
 /* Модальне вікно */
